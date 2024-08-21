@@ -1,0 +1,73 @@
+{
+    "images": [
+        { 
+            "real": "media/game_assets/images/001_real.jpg",
+            "fake": "media/game_assets/images/001_fake.jpg",
+            "info": "Info 1"
+        },
+        { 
+            "real": "media/game_assets/images/001_real.jpg",
+            "fake": "media/game_assets/images/001_fake.jpg",
+            "info": "Info 2"
+        },
+        { 
+            "real": "media/game_assets/images/001_real.jpg",
+            "fake": "media/game_assets/images/001_fake.jpg",
+            "info": "Info 3"
+        }
+    ],
+    "text": [
+        { 
+            "real": "media/game_assets/text/eiffel_tower_real.txt",
+            "fake": "media/game_assets/text/eiffel_tower_fake.txt",
+            "info": "The text contains factual errors and is a typical example of hallucination."
+        },
+        { 
+            "real": "media/game_assets/text/lithium_ion_batteries_real.txt",
+            "fake": "media/game_assets/text/lithium_ion_batteries_fake.txt",
+            "info": "The fake text is revealed by the fact that it contains a classic LLM auto-generated response where it talks about when it was last updated."
+        },
+        { 
+            "real": "media/game_assets/text/guinness_cat_real.txt",
+            "fake": "media/game_assets/text/guinness_cat_fake.txt",
+            "info": "The referenced source does not exist"
+        }
+    ],
+    "audio": [
+        { 
+            "real": "media/game_assets/audio/001_real.mp3",
+            "fake": "media/game_assets/audio/001_fake.mp3",
+            "topImage": "media/game_assets/audio/rock.png",
+            "info": "Info 1"
+        },
+        { 
+            "real": "media/game_assets/audio/001_real.mp3",
+            "fake": "media/game_assets/audio/001_fake.mp3",
+            "topImage": "media/game_assets/audio/metal.png",
+            "info": "Info 2"
+        },
+        { 
+            "real": "media/game_assets/audio/001_real.mp3",
+            "fake": "media/game_assets/audio/001_fake.mp3",
+            "topImage": "media/game_assets/audio/pop.png",
+            "info": "Info 3"
+        }
+    ],
+    "videos": [
+        { 
+            "real": "media/game_assets/videos/001_real.mp4",
+            "fake": "media/game_assets/videos/001_fake.mp4",
+            "info": "Info 1"
+        },
+        { 
+            "real": "media/game_assets/videos/001_real.mp4",
+            "fake": "media/game_assets/videos/001_fake.mp4",
+            "info": "Info 2"
+        },
+        { 
+            "real": "media/game_assets/videos/001_real.mp4",
+            "fake": "media/game_assets/videos/001_fake.mp4",
+            "info": "Info 3"
+        }
+    ]
+}

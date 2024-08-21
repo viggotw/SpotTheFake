@@ -1,0 +1,20 @@
+{
+  "name": "Spot the fake",
+  "version": "1.0.0",
+  "description": "A game to differentiate real content from fakes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "electron": "^32.0.0",
+    "nodemon": "^2.0.22"
+  }
+}

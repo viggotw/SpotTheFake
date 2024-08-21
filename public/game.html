@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot the fake</title>
+    <link rel="icon" href="media/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="banner">
+        <div id="banner-left">
+            <a href="index.html" id="banner-logo-link">
+                <img src="media/sintef_logo.png" alt="Sintef Logo" id="banner-logo">
+            </a>
+        </div>
+        <div id="banner-center">
+            <h1 id="banner-title">Spot the fake</h1>
+        </div>
+        <div id="banner-right">
+            <!-- Optional right-side content -->
+        </div>
+    </div>
+    <div id="game-container">
+        <h1>Hvilken er falsk?</h1>
+        <div id="top-image">
+            <!-- Top images (for audio only) will be dynamically be inserted here -->
+        </div>
+        <div id="media-pair">
+            <!-- Media content will be dynamically inserted here -->
+        </div>
+        <div id="controls">
+            <button class="game-button" id="select-left">☝️ Denne er falsk</button>
+            <button class="game-button" id="select-right">Denne er falsk ☝️</button>
+        </div>
+        <div id="info-box" style="display: none;"></div>
+        <button class="button" id="next-question" style="display: none;">Neste oppgave</button>
+        <div id="stats"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

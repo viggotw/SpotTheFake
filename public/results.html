@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultat</title>
+    <link rel="icon" href="media/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="banner">
+        <div id="banner-left">
+            <a href="index.html" id="banner-logo-link">
+                <img src="media\sintef_logo.png" alt="Game Logo" id="banner-logo">
+            </a>
+        </div>
+        <div id="banner-center">
+            <h1 id="banner-title">Spot the fake</h1>
+        </div>
+        <div id="banner-right">
+            <!-- Optional right-side content -->
+        </div>
+    </div>
+    <div id="results-container">
+        <div id="score"></div>
+        <div id="feedback"></div> <!-- Container for the funny message -->
+        <button class="button" id="restart-button" onclick="window.location.href='index.html'">Spill på nytt</button>
+    </div>
+    <script>
+        // Extract the score from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const correct = parseInt(urlParams.get('correct'), 10);
+        const total = parseInt(urlParams.get('total'), 10);
+        const percentage = (correct / total) * 100;
+
+        // Display the score
+        document.getElementById('score').textContent = `Du fikk ${correct} av ${total} poeng!`;
+
+        // Determine the message based on performance
+        let feedbackMessage;
+        if (percentage === 100) {
+            feedbackMessage = "Fantastisk! Ingenting klarte å lure deg! 🤩";
+        } else if (percentage >= 80) {
+            feedbackMessage = "Godt jobba! Du avslørte det meste! 👏";
+        } else if (percentage >= 60) {
+            feedbackMessage = "Ikke dårlig! Du er ganske skarp, men pass deg for de ekstra vanskelige! 😎";
+        } else if (percentage >= 40) {
+            feedbackMessage = "Vel, du fikk i det minste noen riktige. Kanskje dobbeltsjekk litt mer neste gang? 🤓";
+        } else if (percentage >= 20) {
+            feedbackMessage = "Oi, det ser ut som du ble lurt ganske godt! Bedre lykke neste gang! 😅";
+        } else {
+            feedbackMessage = "Huffda! Prøver du i det hele tatt? Neida, jeg bare tuller... eller. 😜";
+        }
+
+        // Display the feedback message
+        document.getElementById('feedback').textContent = feedbackMessage;
+    </script>
+</body>
+</html>

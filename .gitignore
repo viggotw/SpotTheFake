@@ -1,0 +1,6 @@
+node_modules/
+logs/
+# public/media/game_assets/audio/
+# public/media/game_assets/images/
+# public/media/game_assets/text/
+# public/media/game_assets/text/
