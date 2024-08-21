@@ -9,7 +9,7 @@ let mediaPool;
 let currentPair;
 let correctCount = 0;
 let totalCount = image_levels + text_levels + audio_levels + video_levels;
-let roundCount = 0;
+let roundCount = 1;
 let currentTypeIndex = 0;
 let tasksPresented = 0;
 
@@ -40,7 +40,6 @@ function initGame() {
         .then(response => response.json())
         .then(data => {
             mediaPool = data;
-            updateStats();  // Initialize stats display
             displayNextPair();
         })
         .catch(error => {
@@ -54,6 +53,7 @@ function initGame() {
 
 // Display the next pair of media
 function displayNextPair() {
+    updateStats();
     // Enable the buttons for new selection
     enableButtons();
     document.getElementById('next-question').style.display = 'none';
@@ -179,8 +179,6 @@ function checkAnswer(selected) {
         correct: isCorrect,
         info: currentPair.info
     });
-
-    updateStats();
 }
 
 // Enable the buttons
